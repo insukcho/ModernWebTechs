@@ -2,9 +2,28 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+    <title>welcome</title>
+    <link href="welcome.css" rel="stylesheet" type="text/css" />
+    <script language="javascript" type="text/javascript">
+        function getParameter(theParameter) {
+            var params = window.location.search.substr(1).split('&');
 
+            for (var i = 0; i < params.length; i++) {
+                var p=params[i].split('=');
+                if (p[0] == theParameter) {
+                    return decodeURIComponent(p[1]);
+                }
+            }
+            return false;
+        }
+
+        function loadMessage() {
+            console.log(getParameter("user-id"));
+            document.getElementById("welcome-message").setAttribute("value", "Welcome, " + getParameter("user-id"))
+        }
+    </script>
+</head>
+<body onload="loadMessage()">
+    <input type="text" id="welcome-message"/>
 </body>
 </html>

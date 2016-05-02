@@ -1,0 +1,23 @@
+body {
+  background-color: gray;
+}
+
+.modal-spacer {
+  color: darkblue;
+  position: absolute;
+  background-color: white;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 5px;
+  padding: 1rem;
+}
+
+#user-id {
+  border-color: darkgray;
+  width: 75%;
+}
+
+#login-button {
+  width: 20%;
+}

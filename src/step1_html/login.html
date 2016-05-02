@@ -2,9 +2,21 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+    <title>Login</title>
+    <link href="login.css" rel="stylesheet" type="text/css" />
 
+    <script language="javascript" type="text/javascript">
+        function login_click() {
+            window.location.href = "welcome.html?user-id=" + document.getElementById("user-id").value ;
+        }
+    </script>
+</head>
+
+<body>
+    <div class="modal-spacer">
+        <h3> Please input your name !! </h3>
+        <input type="text" id="user-id"/>
+        <input type="button" id="login-button" value="Click" onclick="login_click()"/>
+    </div>
 </body>
 </html>
